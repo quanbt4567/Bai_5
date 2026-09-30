@@ -151,6 +151,7 @@ header {
     box-sizing: border-box;
     background-color: #FFFFFF;
     padding: 30px 32px 0px 32px;
+    border-radius: 0 0 3px 3px;
 }
 
 .profile-info {
@@ -284,4 +285,54 @@ header {
     flex-direction: column;
     gap: 26px;
     margin-top: 32px;
+}
+
+.email-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.email-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.email-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.email-address {
+    font-size: 16px;
+    color: #2D3748;
+}
+
+.date-email {
+    font-size: 14px;
+    color: #A0AEC0;
+}
+
+.btn-add-email {
+    align-self: flex-start;
+    background-color: #4182F9 10%;
+    color: #4182F9;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-add-email:hover {
+    background-color: #4182F9 10%;
 }
