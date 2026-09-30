@@ -289,14 +289,14 @@ header {
 
 .email-title {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     color: #000000;
 }
 
 .email-item {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
 }
 
 .email-icon {
@@ -318,7 +318,7 @@ header {
 
 .date-email {
     font-size: 14px;
-    color: #A0AEC0;
+    opacity: 50%;
 }
 
 .btn-add-email {
@@ -327,10 +327,10 @@ header {
     color: #4182F9;
     border: none;
     border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 500;
+    padding: 10px 24px;
+    font-size: 16px;
     cursor: pointer;
+    margin-bottom: 71px;
 }
 
 .btn-add-email:hover {
