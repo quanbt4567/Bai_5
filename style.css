@@ -1,338 +1,492 @@
 :root {
-    --page-padding: 40px;
-    --section-padding: 32px;
+  --page-padding: 40px;
+  --section-padding: 32px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html,
 body {
-    min-width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #F9F9F9;
-    display: flex;
-    font-family: 'Poppins';
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  font-family: "Poppins";
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--section-padding) var(--page-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--section-padding) var(--page-padding);
 }
 
 .header-left {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .header-left .welcome-text {
-    font-weight: 500;
-    font-size: 24px;
-    color: #3E435D;
+  font-weight: 500;
+  font-size: 24px;
+  color: #3e435d;
 }
 
 .header-left .date {
-    font-family: 'Poppins';
-    font-weight: 400;
-    font-size: 16px;
-    color: #ADA7A7;
-
-
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  color: #ada7a7;
 }
 
 .header-right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
-.header-right>.search-bar {
-    display: flex;
-    align-items: center;
-    background: #ffffff;
-    box-sizing: border-box;
-    width: 354px;
-    height: 52px;
-    padding: 0 20px;
-    border-radius: 30px;
-    gap: 16px;
-    cursor: pointer;
+.header-right > .search-bar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  width: min(354px, 100%);
+  padding: 14px 20px;
+  margin: 10px 0px;
+  border-radius: 8px;
+  gap: 16px;
+  cursor: pointer;
 }
 
-.header-right>.search-bar input {
-    border: none;
-    outline: none;
-    background: transparent;
-    font-weight: 400;
-    font-size: 16px;
+.header-right > .search-bar input {
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .notification {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .header-right > .profile-avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
 }
 
 .header-right > .profile-avatar img {
-    display: block;
-    width: 52px;
-    height: 52px;
-    border-radius: 10px;
-    object-fit: cover;
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 78px;
-    background-color: #FFFFFF;
-    padding-top: 159px;
-    gap: 47px;
-    flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 78px;
+  background-color: #ffffff;
+  padding-top: 159px;
+  gap: 47px;
+  flex-shrink: 0;
 }
 
 .sidebar .nav-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 58px;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 58px;
+  text-decoration: none;
 }
 
 .sidebar .nav-item svg {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .content-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar .nav-item.active {
-    background: linear-gradient(270deg, rgba(65, 130, 249, 0.2), rgba(65, 130, 249, 0));
+  background: linear-gradient(
+    270deg,
+    rgba(65, 130, 249, 0.2),
+    rgba(65, 130, 249, 0)
+  );
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    padding: var(--section-padding) var(--page-padding);
+  display: flex;
+  flex-direction: column;
+  padding: 0px var(--page-padding);
 }
 .profile-banner {
-    background-image: url('img/banner.png');
-    background-size: cover;
-    background-position: center;
-    height: 100px;
+  background-image: url("img/banner.png");
+  background-size: cover;
+  background-position: center;
+  height: 100px;
 }
 
 .profile-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 20px 32px;
-    background-color: #FFFFFF;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 32px;
+  background-color: #ffffff;
 }
 
 .form {
-    box-sizing: border-box;
-    background-color: #FFFFFF;
-    padding: 30px 32px 0px 32px;
-    border-radius: 0 0 3px 3px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 30px 32px 0px 32px;
+  border-radius: 0 0 3px 3px;
 }
 
 .profile-info {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .profile-main {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .profile-content .profile-avatar {
-    flex: 0 0 100px;
-    width: 100px;
-    height: 100px;
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .profile-content .profile-avatar img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .profile-details {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin: 20px 0;
-    margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 20px 0;
+  margin-left: 24px;
 }
 
 .profile-content .name {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .profile-content .email {
-    color: #8A8A8A;
-    font-size: 16px;
-    line-height: 24px;
+  color: #8a8a8a;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .edit-button {
-    border: none;
-    width: 93px;
-    border-radius: 8px;
-    padding: 10px 32px;
-    margin: 28px 0;
-    background-color: #4182F9;
-    color: #FFFFFF;
-    cursor: pointer;
+  border: none;
+  width: 93px;
+  border-radius: 8px;
+  padding: 10px 32px;
+  margin: 28px 0;
+  background-color: #4182f9;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .profile-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .form-row {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
 }
 
 .input-group {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .input-group label {
-    font-size: 16px;
-    color: #000000;
-    opacity: 80%;
+  font-size: 16px;
+  color: #000000;
+  opacity: 80%;
 }
 
 .input-group input,
 .input-group select {
-    box-sizing: border-box;
-    background-color: #F9F9F9;
-    border: none;
-    border-radius: 8px;
-    padding: 14px 0px 20px 14px;
-    font-size: 16px;
-    color: #2D3748;
-    outline: none;
-    width: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0px 14px 20px;
+  font-size: 16px;
+  color: #000000;
+  opacity: 40%;
+  outline: none;
+  width: 100%;
 }
 
 .input-group input::placeholder {
-    color: #A0AEC0;
-}
-
-.select-wrapper {
-    position: relative;
-    width: 100%;
-    display: flex;
+  color: #000000;
+  opacity: 1;
 }
 
 .input-group select:invalid {
-    color: #000000;
-    opacity: 40%;
+  color: #000000;
+  opacity: 40%;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
 }
 
 .select-wrapper select {
-    appearance: none;
-    -webkit-appearance: none;
-    cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
 }
 
 .select-wrapper svg {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 50%;
-    pointer-events: none;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 50%;
+  pointer-events: none;
 }
 
 .email-section {
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 32px;
 }
 
 .email-title {
-    font-size: 18px;
-    font-weight: 500;
-    color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
 }
 
 .email-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .email-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .email-details {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .email-address {
-    font-size: 16px;
-    color: #2D3748;
+  font-size: 16px;
+  color: #2d3748;
 }
 
 .date-email {
-    font-size: 14px;
-    opacity: 50%;
+  font-size: 14px;
+  opacity: 50%;
 }
 
 .btn-add-email {
-    align-self: flex-start;
-    background-color: #4182F91A;
-    color: #4182F9;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 71px;
+  align-self: flex-start;
+  background-color: #4182f91a;
+  color: #4182f9;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 71px;
 }
 
 .btn-add-email:hover {
-    background-color: #4182F91A;
+  background-color: #4182f91a;
+}
+
+@media (min-width: 1440px) {
+  body {
+    min-width: 1440px;
+    min-height: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --page-padding: 24px;
+    --section-padding: 24px;
+  }
+
+  .header-right {
+    gap: 12px;
+  }
+
+  .form-row {
+    gap: 20px;
+  }
+
+  .profile-content,
+  .form {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 64px;
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .sidebar .nav-item {
+    width: 58px;
+    height: 58px;
+  }
+
+  .content-wrapper {
+    min-width: 0;
+  }
+
+  header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .header-right {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+  }
+
+  .header-right > .search-bar {
+    flex: 1 1 220px;
+    max-width: 354px;
+  }
+
+  .profile-content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .profile-info {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .profile-main {
+    min-width: 0;
+  }
+
+  .profile-details {
+    min-width: 0;
+  }
+
+  .profile-content .name,
+  .profile-content .email {
+    overflow-wrap: anywhere;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --page-padding: 16px;
+    --section-padding: 16px;
+  }
+
+  .header-left .welcome-text {
+    font-size: 20px;
+  }
+
+  .header-right {
+    justify-content: space-between;
+  }
+
+  .header-right > .search-bar {
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .profile-content,
+  .form {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .profile-content .profile-avatar {
+    flex-basis: 72px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .profile-details {
+    margin-left: 12px;
+  }
+
+  .profile-content .name {
+    font-size: 18px;
+  }
+
+  .edit-button {
+    width: auto;
+    padding: 10px 20px;
+  }
 }
