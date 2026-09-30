@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <aside class="sidebar">
-        <a href="#" class="nav-item active">
+    <aside class="sidebar" aria-label="Primary navigation">
+        <a href="#" class="nav-item active" aria-current="page" aria-label="Dashboard">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M22 10.9V4.1C22 2.6 21.36 2 19.77 2H15.73C14.14 2 13.5 2.6 13.5 4.1V10.9C13.5 12.4 14.14 13 15.73 13H19.77C21.36 13 22 12.4 22 10.9Z"
@@ -28,7 +28,7 @@
 
         </a>
 
-        <a href="#" class="nav-item">
+        <a href="#" class="nav-item" aria-label="Analytics">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.2">
                     <path
@@ -42,7 +42,7 @@
 
         </a>
 
-        <a href="#" class="nav-item">
+        <a href="#" class="nav-item" aria-label="Achievements">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.2">
                     <path
@@ -59,7 +59,7 @@
 
         </a>
 
-        <a href="#" class="nav-item">
+        <a href="#" class="nav-item" aria-label="Messages">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.2">
                     <path
@@ -82,7 +82,7 @@
 
         </a>
 
-        <a href="#" class="nav-item">
+        <a href="#" class="nav-item" aria-label="Settings">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.2">
                     <path
@@ -147,7 +147,7 @@
                     <div class="profile-info">
                         <div class="profile-main">
                             <div class="profile-avatar">
-                                <img src="img/profile-picture.png" alt="Profile Avatar2">
+                                <img src="img/profile-picture.png" alt="Alexa Rawles profile picture">
                             </div>
                             <div class="profile-details">
                                 <div class="name">Alexa Rawles</div>
@@ -174,7 +174,7 @@
                         <div class="input-group">
                             <label for="gender">Gender</label>
                             <div class="select-wrapper">
-                                <select required>
+                                <select id="gender" name="gender" required>
                                     <option value="" disabled selected>Your Gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
