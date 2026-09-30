@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
 :root {
   --page-padding: 40px;
   --section-padding: 32px;
@@ -7,6 +9,13 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 html,
@@ -19,7 +28,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   display: flex;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -33,6 +42,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 233px;
 }
 
 .header-left .welcome-text {
@@ -59,34 +69,47 @@ header {
   display: flex;
   align-items: center;
   background: #ffffff;
-  width: min(354px, 100%);
-  padding: 14px 20px;
-  margin: 10px 0px;
+  width: fit-content;
+  padding-left: 20px;
   border-radius: 8px;
   gap: 16px;
+}
+
+.header-right > .search-bar svg {
   cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.notification,
+.header-right > .profile-avatar,
+.email-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-right > .search-bar input {
   min-width: 0;
+  width: auto;
+  flex: 0 0 auto;
+  field-sizing: content;
   border: none;
   outline: none;
   background: transparent;
+  padding: 0;
   font-weight: 400;
   font-size: 16px;
+  margin: 14px 237px 14px 0px;
+  line-height: 24px;
+  padding-right: 6px;
 }
 
 .notification {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
 }
 
 .header-right > .profile-avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 52px;
   height: 52px;
 }
@@ -150,17 +173,20 @@ header {
   height: 100px;
 }
 
+.profile-content,
+.form {
+  background-color: #ffffff;
+}
+
 .profile-content {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 20px 32px;
-  background-color: #ffffff;
 }
 
 .form {
   box-sizing: border-box;
-  background-color: #ffffff;
   padding: 30px 32px 0px 32px;
   border-radius: 0 0 3px 3px;
 }
@@ -262,13 +288,13 @@ header {
   width: 100%;
 }
 
-.input-group input::placeholder {
+.input-group input::placeholder,
+.input-group select:invalid {
   color: #000000;
   opacity: 1;
 }
 
 .input-group select:invalid {
-  color: #000000;
   opacity: 40%;
 }
 
@@ -312,12 +338,6 @@ header {
   gap: 20px;
 }
 
-.email-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .email-details {
   display: flex;
   flex-direction: column;
@@ -336,7 +356,6 @@ header {
 
 .btn-add-email {
   align-self: flex-start;
-  background-color: #4182f91a;
   color: #4182f9;
   border: none;
   border-radius: 8px;
@@ -346,6 +365,7 @@ header {
   margin-bottom: 71px;
 }
 
+.btn-add-email,
 .btn-add-email:hover {
   background-color: #4182f91a;
 }
@@ -453,7 +473,9 @@ header {
   }
 
   .header-left .welcome-text {
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
   }
 
   .header-right {
