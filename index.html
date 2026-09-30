@@ -145,26 +145,120 @@
                 <div class="profile-banner"></div>
                 <div class="profile-content">
                     <div class="profile-info">
-                        <div class="profile-avatar">
-                            <img src="img/profile-picture.png" alt="Profile Avatar2">
+                        <div class="profile-main">
+                            <div class="profile-avatar">
+                                <img src="img/profile-picture.png" alt="Profile Avatar2">
+                            </div>
+                            <div class="profile-details">
+                                <div class="name">Alexa Rawles</div>
+                                <div class="email">alexarawles@gmail.com</div>
+                            </div>
                         </div>
-                        <div class="profile-details">
-                            <div class="name">Alexa Rawles</div>
-                            <div class="email">alexarawles@gmail.com</div>
-                        </div>
+                        <button class="edit-button" type="button">Edit</button>
                     </div>
                 </div>
             </section>
             <section class="form">
                 <form class="profile-form">
-                    <div class="form-grid">
+                    <div class="form-row">
                         <div class="input-group">
                             <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" name="full-name">
+                            <input type="text" id="full-name" name="full-name" placeholder="Your First Name">
+                        </div>
+                        <div class="input-group">
+                            <label for="nick-name">Nick Name</label>
+                            <input type="text" id="nick-name" name="nick-name" placeholder="Your Nick Name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="gender">Gender</label>
+                            <div class="select-wrapper">
+                                <select required>
+                                    <option value="" disabled selected>Your Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <optuion value="other">Other</option>
+                                </select>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.92 8.95001L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.95001"
+                                        stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="country">Country</label>
+                            <div class="select-wrapper">
+                                <select id="country" name="country" required>
+                                    <option value="" disabled selected>Your Country</option>
+                                    <option value="vn">Vietnam</option>
+                                    <option value="us">United States</option>
+                                </select>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.92 8.95001L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.95001"
+                                        stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="language">Language</label>
+                            <div class="select-wrapper">
+                                <select id="language" name="language" required>
+                                    <option value="" disabled selected>Your Language</option>
+                                    <option value="english">English</option>
+                                    <option value="vietnamese">Vietnamese</option>
+                                </select>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.92 8.95001L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.95001"
+                                        stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="time-zone">Time Zone</label>
+                            <div class="select-wrapper">
+                                <select id="time-zone" name="time-zone" required>
+                                    <option value="" disabled selected>Your Time Zone</option>
+                                    <option value="utc">UTC</option>
+                                    <option value="utc-plus-7">UTC+07:00</option>
+                                </select>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.92 8.95001L13.4 15.47C12.63 16.24 11.37 16.24 10.6 15.47L4.08002 8.95001"
+                                        stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </form>
-                </table>
+                <div class="email-section">
+                    <div class="email-text">Email</div>
+                    <div class="email-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle opacity="0.1" cx="24" cy="24" r="24" fill="#4182F9" />
+                            <path
+                                d="M29 15.5H19C16 15.5 14 17 14 20.5V27.5C14 31 16 32.5 19 32.5H29C32 32.5 34 31 34 27.5V20.5C34 17 32 15.5 29 15.5ZM29.47 21.59L26.34 24.09C25.68 24.62 24.84 24.88 24 24.88C23.16 24.88 22.31 24.62 21.66 24.09L18.53 21.59C18.21 21.33 18.16 20.85 18.41 20.53C18.67 20.21 19.14 20.15 19.46 20.41L22.59 22.91C23.35 23.52 24.64 23.52 25.4 22.91L28.53 20.41C28.85 20.15 29.33 20.2 29.58 20.53C29.84 20.85 29.79 21.33 29.47 21.59Z"
+                                fill="#4182F9" />
+                        </svg>
+
+                    </div>
+                    <div class="email-address">alexarawles@gmail.com</div>
+                    <div class="date-email">1 month ago</div>
+                    <button type="button" class="btn-add-email">+Add Email Address</button>
+                    </div>
             </section>
         </main>
     </div>
