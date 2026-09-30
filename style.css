@@ -323,7 +323,7 @@ header {
 
 .btn-add-email {
     align-self: flex-start;
-    background-color: #4182F9 10%;
+    background-color: #4182F91A;
     color: #4182F9;
     border: none;
     border-radius: 8px;
@@ -334,5 +334,5 @@ header {
 }
 
 .btn-add-email:hover {
-    background-color: #4182F9 10%;
+    background-color: #4182F91A;
 }
